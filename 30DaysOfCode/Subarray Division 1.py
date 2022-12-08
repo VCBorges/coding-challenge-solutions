@@ -1,18 +1,15 @@
-n = 5
-s = [2,2,1,3,2]
+def birthday(s, d, m):
+    
+    j = m
+    i = 0
+    count = 0
 
-d = 4
-m = 2
-
-for i in s:
-    sc = s.copy()
-    sc.remove(i)
-
-    print('-=' * 20)
-    for j in sc:
-        print(f'{i} + {j} = {i+j}')
-        if i + j == 4:
-            s.remove(i)
-            s.remove(j)
-            break
+    while j <= len(s):
+        if sum(s[i:j]) == d:
+            print(f'{s[i:j]}')
+            count += 1
             
+        i += 1
+        j += 1
+
+    return count
