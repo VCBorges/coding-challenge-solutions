@@ -9,5 +9,3 @@ def pangrams(s):
         return 'pangram'
     else:
         return 'not pangram'
-
-
