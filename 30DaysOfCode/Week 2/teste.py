@@ -1,28 +1,27 @@
-import math
+lista = list(range(8))
 
-n = 20
+p = 4
 
-ar = [4, 5, 5, 5, 6, 6, 4, 1, 4, 4, 3, 6, 6, 3, 6, 1, 4, 5, 5, 5]
+asc = p
 
-# n = 9
+des = n - p
 
-# ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+print(des)
 
-ar2 = set(ar)
-
-cont = 0
-
-for i in ar2:
-    qnt = ar.count(i)
-    if qnt >= 2:
-        if qnt % 2 == 0:
-            cont += qnt / 2
-            print(i, qnt, cont)
-        else:
-            cont += int(qnt / 2)
+output = [lista[i:i + 2] for i in range(0, len(lista), 2)]
 
 
-            
-            
+if asc > des:
+    output = sorted(output, reverse=True)
+
+print(output)
+cont = -1
+
+for j in output:
+    cont += 1
+    print(j)
+    if p in j:
+        break
 print(cont)
-        
+
+# sorted(output, reverse=True)
