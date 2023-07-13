@@ -1,8 +1,10 @@
 def maxMin(k, arr):
     arr.sort()
-    unf = []
-    for i in range(len(arr)-(k-1)):
-        unf.append(arr[k+i-1]-arr[i])
+    # unf = []
+    # for i in range(len(arr)-(k-1)):
+    #     unf.append(arr[k+i-1]-arr[i])
+        
+    unf = [arr[k+i-1] - arr[i] for i in range(len(arr) - (k-1))]
         
     return (min(unf))
 

@@ -1,48 +1,41 @@
-def findZigZagSequence(a, n):
-    
-    a.sort() #? a = [1,2,3,4,5]
-    
-    #? a[0] = 1
-    #? a[1] = 2
-    #? a[2] = 3
-    #? a[3] = 4
-    #? a[4] = 5
-    
-    
-    mid = int((n + 1)/2) #? mid = 3
-    
-    #? a[3] == 4, a[4] == 5 = a[4] == 5, a[3] == 4
-    a[mid], a[n-1] = a[n-1], a[mid] 
-    
-    # ? a = [1, 2, 3, 5, 4]
+def findZigZagSequence(a: list, n: int):
+    a.sort() # [1, 2, 3, 4, 5]
+    mid = int((n + 1)/2) # 3
 
-    #? st = 4
+    print(f'before a[mid]: {a[mid]}')
+    print(f'before a[n-1]: {a[n-1]}')
+
+    
+    a[mid], a[n-1] = a[n-1], a[mid]
+
+    print(f'after a[mid]: {a[mid]}')
+    print(f'after a[n-1]: {a[n-1]}')
+    
+    print(f'after a: {a}')
     st = mid + 1
-    
-    #? ed = 4
     ed = n - 1
+
+    print(f'st: {st}')
+    print(f'ed: {ed}')
+
+    print(f'a[st]: {a[st]}')
+
+    a[4], a[4] = a[4], a[4]
     
-    #? while 4 <= 4:
+    print(f'a: {a}')
+    
     while(st <= ed):
-        
-       #? a[4] == 4, a[4] == 4 = a[4] == 4, a[4] == 4
-        a[4], a[4] = a[4], a[4]
+        a[st], a[ed] = a[ed], a[st]
         st = st + 1
         ed = ed + 1
 
-    
-    for i in range (n):
-        if i == n-1:
-            print(a[i])
-        else:
-            print(a[i], end = ' ')
-    return 
+    # for i in range (n):
+    #     if i == n-1:
+    #         print(a[i])
+    #     else:
+    #         print(a[i], end = ' ')
+    # return
 
-test_cases = 1
-for cs in range (test_cases):
-    n = 5
-    a = [2,3,5,1,4]
-    findZigZagSequence(a, n)
-
-    print(findZigZagSequence(a, n))
-
+a = [2,3,5,1,4]
+n = len(a)
+findZigZagSequence(a, n)
