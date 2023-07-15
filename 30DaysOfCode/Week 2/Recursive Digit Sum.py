@@ -12,10 +12,10 @@
 
 
 def superDigit(n: str, k: int) -> int:
-    p = str(sum(map(int, n)) * k)
-    while len(p) > 1:
-        p = str(sum(map(int, p)))
-    return int(p)
+    p = sum(map(int, n)) * k
+    while p > 9:
+        p = sum(map(int, str(p)))
+    return p
 
 
 
