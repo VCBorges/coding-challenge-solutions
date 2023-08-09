@@ -33,7 +33,7 @@ def findZigZagSequence(a: list, n: int):
     #     if i == n-1:
     #         print(a[i])
     #     else:
-    #         print(a[i], end = ' ')
+    #         print(a[i], end = ' ')acker
     # return
 
 a = [2,3,5,1,4]
