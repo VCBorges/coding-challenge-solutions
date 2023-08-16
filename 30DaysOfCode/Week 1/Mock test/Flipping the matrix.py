@@ -2,8 +2,10 @@ def flippingMatrix(matrix):
     
     size = len(matrix)
 
-    sorted_list = [j for i in matrix 
-                        for j in i]
+    sorted_list = [
+        j for i in matrix 
+            for j in i
+    ]
 
     b = []
 
