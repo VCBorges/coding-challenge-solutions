@@ -4,51 +4,31 @@ def dynamicArray(n: int, queries: list[int]):
     ]
     
     last_answer = 0
-    result = []
+    answers = []
     
     for query in queries:
+        idx = ((query[1] ^ last_answer) % n)
+
         if query[0] == 1:
-            idx = ((query[1] ^ last_answer) % n)
             arr[idx].append(query[2])
         else:
-            idx = ((query[1] ^ last_answer) % n)
-            # print(f'last answer {last_answer}')
-            last_answer = idx
-            # result.append(last_answer)
-        # print(idx)
-    
-    
-    
-    print(result)
-    print(f'arr {arr}')
-    
-    return arr
+            last_answer = arr[idx][query[2] % len(arr[idx])]
+            answers.append(last_answer)
+    return answers
 
 
-# first_multiple_input = input().rstrip().split()
 
-# n = int(first_multiple_input[0])
+first_multiple_input = input().rstrip().split()
 
-# q = int(first_multiple_input[1])
+n = int(first_multiple_input[0])
 
-# queries = []
+q = int(first_multiple_input[1])
 
-# for _ in range(q):
-#     queries.append(list(map(int, input().rstrip().split())))
+queries = []
 
-
-# print(f'queries {queries}')    
-
-n = 2
-
-queries = [
-    [1, 0, 5],
-    [1, 1, 7],
-    [1, 0, 3],
-    [2, 1, 0],
-    [2, 1, 1],
-]
+for _ in range(q):
+    queries.append(list(map(int, input().rstrip().split())))
 
 result = dynamicArray(n, queries)
 
-print(result)
+print('\n'.join(map(str, result)))
