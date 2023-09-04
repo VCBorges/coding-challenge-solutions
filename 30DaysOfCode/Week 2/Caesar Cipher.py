@@ -1,6 +1,6 @@
 import string
 
-def caesarCipher(s, k):
+def caesarCipher(s: str, k):
 
     r = ''
     for i in s:
