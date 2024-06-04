@@ -1,10 +1,12 @@
 import textwrap
 
-def wrap(string,max_width):
-    a = textwrap.wrap(string,max_width)
+
+def wrap(string, max_width):
+    a = textwrap.wrap(string, max_width)
     for i in a:
         print(i)
-    return ('')
+    return ''
+
 
 if __name__ == '__main__':
     string = input()

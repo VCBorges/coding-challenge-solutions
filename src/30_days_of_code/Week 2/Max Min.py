@@ -3,10 +3,11 @@ def maxMin(k, arr):
     # unf = []
     # for i in range(len(arr)-(k-1)):
     #     unf.append(arr[k+i-1]-arr[i])
-        
-    unf = [arr[k+i-1] - arr[i] for i in range(len(arr) - (k-1))]
-        
-    return (min(unf))
+
+    unf = [arr[k + i - 1] - arr[i] for i in range(len(arr) - (k - 1))]
+
+    return min(unf)
+
 
 n = int(input().strip())
 

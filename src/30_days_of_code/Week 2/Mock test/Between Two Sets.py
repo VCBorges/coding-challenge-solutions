@@ -12,7 +12,6 @@ def is_factor_of_all_elements_in_second_array(n: int, arr: list[int]):
     return True
 
 
-
 def getTotalX(a: list[int], b: list[int]) -> int:
     result = 0
     for i in range(a[0], b[-1] + 1):
@@ -22,9 +21,6 @@ def getTotalX(a: list[int], b: list[int]) -> int:
             if second:
                 result += 1
     return result
-    
-    
-    
 
 
 a = [2, 4]
@@ -32,5 +28,3 @@ b = [16, 32, 96]
 
 
 print(getTotalX(a, b))
-
-

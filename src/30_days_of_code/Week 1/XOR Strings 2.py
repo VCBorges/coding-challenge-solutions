@@ -1,5 +1,5 @@
 def strings_xor(s, t):
-    res = ""
+    res = ''
     for i in range(len(s)):
         if s[i] == t[i]:
             res += '0'
@@ -8,8 +8,9 @@ def strings_xor(s, t):
 
     return res
 
+
 s = input()
-t = input()  
+t = input()
 
 print(strings_xor(s, t))
 

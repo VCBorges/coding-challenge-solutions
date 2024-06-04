@@ -11,8 +11,9 @@ def sockMerchant(n, ar):
                 print(i, qnt, cont)
             else:
                 cont += int(qnt / 2)
-                
+
     return int(cont)
+
 
 n = int(input().strip())
 
@@ -21,4 +22,3 @@ ar = list(map(int, input().rstrip().split()))
 result = sockMerchant(n, ar)
 
 print(str(result))
-

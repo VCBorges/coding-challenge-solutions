@@ -1,7 +1,5 @@
 def gridChallenge(grid: list) -> str:
-    columns = [
-        [] for _ in range(len(grid))
-    ]
+    columns = [[] for _ in range(len(grid))]
 
     for i, row in enumerate(grid):
         grid[i] = ''.join(sorted(row))
@@ -13,7 +11,7 @@ def gridChallenge(grid: list) -> str:
         if column != sorted(column):
             result = 'NO'
             break
-    
+
     return result
 
 

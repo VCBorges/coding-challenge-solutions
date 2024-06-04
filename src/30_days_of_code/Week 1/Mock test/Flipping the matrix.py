@@ -1,19 +1,15 @@
 def flippingMatrix(matrix):
-    
     size = len(matrix)
 
-    sorted_list = [
-        j for i in matrix 
-            for j in i
-    ]
+    sorted_list = [j for i in matrix for j in i]
 
     b = []
 
     for i in range(size):
         b.append(max(sorted_list))
         sorted_list.remove(max(sorted_list))
-        
-    return (sum(b))
+
+    return sum(b)
 
 
 q = int(input().strip())

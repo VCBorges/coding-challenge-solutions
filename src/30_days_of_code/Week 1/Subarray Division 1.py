@@ -1,5 +1,4 @@
 def birthday(s, d, m):
-    
     j = m
     i = 0
     count = 0
@@ -8,7 +7,7 @@ def birthday(s, d, m):
         if sum(s[i:j]) == d:
             print(f'{s[i:j]}')
             count += 1
-            
+
         i += 1
         j += 1
 

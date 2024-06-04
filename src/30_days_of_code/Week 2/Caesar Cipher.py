@@ -1,7 +1,7 @@
 import string
 
-def caesarCipher(s: str, k):
 
+def caesarCipher(s: str, k):
     r = ''
     for i in s:
         if i.isalpha():
@@ -14,12 +14,12 @@ def caesarCipher(s: str, k):
 
             while p + k > 25:
                 p = p - 25 - 1
-                    
+
             r += alphabet[p + k]
             print(r)
         else:
             r += i
-    
+
     return r
 
 

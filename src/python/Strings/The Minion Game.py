@@ -4,9 +4,9 @@ def minion_game(string):
     for i in range(len(string)):
         score = len(string) - i
         if string[i] in 'AEIOU':
-            vowel+=score
+            vowel += score
         else:
-            conso+=score
+            conso += score
     if conso == vowel:
         print('Draw')
     if conso > vowel:
@@ -14,5 +14,6 @@ def minion_game(string):
     if conso < vowel:
         print(f'Kevin {vowel}')
 
-s = "BANANA"
+
+s = 'BANANA'
 minion_game(s)

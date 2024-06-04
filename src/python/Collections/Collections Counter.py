@@ -14,7 +14,7 @@ for i in range(customers):
     list_shoe_size.append(shoe_size)
 
 for i3 in range(len(list_shoe_size)):
-    list_shoe_size[i3] = list(map(int,list_shoe_size[i3]))
+    list_shoe_size[i3] = list(map(int, list_shoe_size[i3]))
 
 for i4 in list_shoe_size:
     price.append(i4[1])

@@ -1,4 +1,5 @@
 from itertools import product
+
 A = []
 B = []
 a = input().split()
@@ -7,8 +8,7 @@ for i in a:
 b = input().split()
 for i2 in b:
     B.append(int(i2))
-print(*list(product(A,B,repeat=1)))
-
+print(*list(product(A, B, repeat=1)))
 
 
 """A = input().split()

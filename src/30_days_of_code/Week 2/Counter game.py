@@ -7,16 +7,14 @@ def is_power_of_2(number: int) -> bool:
     return False
 
 
-
 def get_closest_lower_power_of_2(number: int) -> int:
     if number <= 0:
-        return 0 
-    
+        return 0
+
     power = int(math.log2(number))
-    closest_power = 2 ** power
+    closest_power = 2**power
     return closest_power
-    
-    
+
 
 def counterGame(n: int):
     count = 0
@@ -27,7 +25,6 @@ def counterGame(n: int):
             n -= get_closest_lower_power_of_2(n)
         count += 1
     return 'Richard' if count % 2 == 0 else 'Louise'
-
 
 
 t = int(input().strip())

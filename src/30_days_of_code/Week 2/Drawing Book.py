@@ -1,8 +1,8 @@
 def pageCount(n, p):
-    lista = list(range(n+1))
+    lista = list(range(n + 1))
     asc = p
     des = n - p
-    output = [lista[i:i + 2] for i in range(0, len(lista), 2)]
+    output = [lista[i : i + 2] for i in range(0, len(lista), 2)]
     if asc > des:
         output = sorted(output, reverse=True)
     cont = -1

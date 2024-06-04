@@ -1,4 +1,4 @@
-#soma de variaveis de varios tipos
+# soma de variaveis de varios tipos
 i = 4
 d = 4.0
 s = 'HackerRank '

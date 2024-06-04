@@ -5,12 +5,13 @@ def diagonalDifference(arr):
     for i in range(lenght):
         s = arr[i][i]
         soma += s
-        
-        n = arr[i][(lenght-1)-i]
+
+        n = arr[i][(lenght - 1) - i]
         soma_i += n
-        
-    return(abs(soma+soma_i))
-    
+
+    return abs(soma + soma_i)
+
+
 n = int(input().strip())
 
 arr = []
@@ -20,8 +21,7 @@ for _ in range(n):
 
 result = diagonalDifference(arr)
 
-    
+
 print(diagonalDifference(result))
 
 print(len())
-

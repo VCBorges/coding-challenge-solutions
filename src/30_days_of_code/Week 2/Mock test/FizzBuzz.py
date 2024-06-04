@@ -8,9 +8,8 @@ def fizzBuzz(n: int):
             print('Buzz')
         if i % 3 != 0 and i % 5 != 0:
             print(i)
-            
-            
-            
+
+
 n = 15
 
 fizzBuzz(n)

@@ -23,7 +23,6 @@ def balancedSums(arr):
     return 'NO'
 
 
-
 T = int(input().strip())
 
 for T_itr in range(T):
@@ -32,5 +31,3 @@ for T_itr in range(T):
     arr = list(map(int, input().rstrip().split()))
 
     result = balancedSums(arr)
-
-

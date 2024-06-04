@@ -7,6 +7,7 @@ def bomberMan(n, grid):
             print(pixel[j])
     return grid
 
+
 first_multiple_input = '6 7 3'.split(' ')
 
 r = int(first_multiple_input[0])
@@ -20,8 +21,8 @@ n = int(first_multiple_input[2])
 # for _ in range(r):
 #     grid_item = input()
 #     grid.append(grid_item)
-    
-grid =['.......', '...O...', '....O..','...O...','.......', 'OO.....', 'OO.....']
+
+grid = ['.......', '...O...', '....O..', '...O...', '.......', 'OO.....', 'OO.....']
 
 result = bomberMan(n, grid)
 

@@ -1,7 +1,7 @@
 def pangrams(s):
     # Write your code here
     s = s.lower()
-    a = s.replace(' ','')
+    a = s.replace(' ', '')
     unico = set()
     for i in a:
         unico.add(i)

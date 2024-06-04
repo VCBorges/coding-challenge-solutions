@@ -7,15 +7,16 @@ def dynamicArray(n: int, queries: list[int]) -> list[int]:
         x = queries[i][1]
         y = queries[i][2]
         if queries[i][0] == 1:
-            idx = ((x ^ last_answer) % n)
+            idx = (x ^ last_answer) % n
             arrs[idx].append(y)
             t += 1
         else:
-            idx = ((x ^ last_answer) % n)
+            idx = (x ^ last_answer) % n
             last_answer = arrs[idx][y % len(arrs[idx])]
             answers.append(last_answer)
-    
+
     return answers
+
 
 first_multiple_input = input().rstrip().split()
 
@@ -27,5 +28,5 @@ queries = []
 
 for _ in range(q):
     queries.append(list(map(int, input().rstrip().split())))
-    
+
 result = dynamicArray(n, queries)
