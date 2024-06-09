@@ -1,3 +1,3 @@
-# HackerRank
+# Description
 
-HackerRank exercises.
+Coding questions solutions.

@@ -6,17 +6,17 @@ def hackerlandRadioTransmitters(
     houses = sorted(set(houses))
     num_houses = len(houses)
     i = 0
-    
+
     while i < num_houses:
         num_transmitters += 1
         transmitter_loc = houses[i] + transmitter_range
         while i < num_houses and houses[i] <= transmitter_loc:
             i += 1
-        
+
         transmitter_max_range = houses[i - 1] + transmitter_range
         while i < num_houses and houses[i] <= transmitter_max_range:
             i += 1
-            
+
     return num_transmitters
 
 
