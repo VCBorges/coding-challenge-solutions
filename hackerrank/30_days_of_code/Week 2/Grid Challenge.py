@@ -1,31 +1,15 @@
-def gridChallenge(grid: list) -> str:
-    columns = [[] for _ in range(len(grid))]
-
-    for i, row in enumerate(grid):
-        grid[i] = ''.join(sorted(row))
-        for j, letter in enumerate(grid[i]):
-            columns[j].append(letter)
+def gridChallenge(grid: list[str]) -> str:
+    # 1. Sort the rows
+    # 2. Check if all the columns are sorted in alphabetical order.
+    for i in range(len(grid)):
+        grid[i] = ''.join(sorted(grid[i]))
 
     result = 'YES'
-    for column in columns:
-        if column != sorted(column):
+
+    for j in range(len(grid[0])):
+        column = [grid[k][j] for k in range(len(grid))]
+        if ''.join(column) != ''.join(sorted(column)):
             result = 'NO'
             break
 
     return result
-
-
-t = int(input().strip())
-
-for t_itr in range(t):
-    n = int(input().strip())
-
-    grid = []
-
-    for _ in range(n):
-        grid_item = input()
-        grid.append(grid_item)
-
-    result = gridChallenge(grid)
-
-    print(result)
