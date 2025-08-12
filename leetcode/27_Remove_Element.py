@@ -1,5 +1,5 @@
 class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
+    def removeElement(self, nums: list[int], val: int) -> int:
         # Remove all ocurrances of val in nums inplace
         # return the number of elements in nums that are not equal to val
         # the first k elements from nums should not not equal to val

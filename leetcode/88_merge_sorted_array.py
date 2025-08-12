@@ -13,7 +13,3 @@ class Solution:
         sorted_result = sorted(nums1_relevant_part + nums2)
         for i in range(len(nums1)):
             nums1[i] = sorted_result[i]
-
-
-
-[1].

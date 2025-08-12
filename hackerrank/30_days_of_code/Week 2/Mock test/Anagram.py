@@ -10,14 +10,3 @@ def anagram(s: str):
     s = Counter(s[: n // 2]) - Counter(s[n // 2 :])
 
     return sum(s.values())
-    ...
-
-
-s = ...
-
-# print(anagram(s))
-
-
-s = 'aaaa'
-
-print(list(s))
